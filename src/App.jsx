@@ -1,12 +1,13 @@
 import LuckyN from "./LuckyN";
 import { sum } from "./utils";
 import BoxGrid from "./BoxGrid";
-function lessThan4(dice) {
+
+function lessThan4(dice){
   return sum(dice) < 4;
 }
 
-function allSameValue(dice) {
-  return dice.every((v) => v === dice[0]);
+function allSame(dice){
+  return dice.every( (v) => v=== dice[0]);
 }
 
 function App() {
@@ -20,9 +21,13 @@ function App() {
         title="Roll the same number"
       /> */}
 
-      <LuckyN/>
-      <LuckyN numDice={4} goal={10} color={"red"} />
-      <LuckyN numDice={5} goal={10} color={"blue"} />
+{/* //U can put numDice if u want or not.. cuz in LuckyN.jsx , the default value is already set
+//  */}
+      <LuckyN winCheck={lessThan4}  />
+      <LuckyN winCheck={allSame}  numDice={3} />
+
+      {/* <LuckyN numDice={4} goal={10} color={"red"} /> */}
+      {/* <LuckyN numDice={5} goal={10} color={"blue"} /> */}
 
     </>
   );

@@ -21,6 +21,9 @@ function App() {
       /> */}
 
       <LuckyN/>
+      <LuckyN numDice={4} goal={10} color={"red"} />
+      <LuckyN numDice={5} goal={10} color={"blue"} />
+
     </>
   );
 }

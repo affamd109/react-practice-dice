@@ -44,8 +44,8 @@ export default function BoxGrid(){
   return ( 
     <div className="BoxGrid" >
 
-      {boxes.map((b , idx) => (
-        <Box isActive={b} toggle={() => toggleBox(idx)} />
+      {boxes.map((val , idx) => (
+        <Box isActive={val} toggle={() => toggleBox(idx)} />
 
       ))}
 
